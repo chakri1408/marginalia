@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #F7F4EE;
+  --color-paper-raised: #FFFFFF;
+  --color-ink: #1C1F1A;
+  --color-ink-soft: #585B51;
+  --color-ink-faint: #8E8D81;
+  --color-line: #E7E2D8;
+  --color-emerald: #1B4332;
+  --color-emerald-deep: #102A20;
+  --color-emerald-soft: #E7EDE8;
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  body { @apply bg-paper text-ink font-sans antialiased; }
+  h1, h2, h3, h4 { @apply font-display; }
+  ::selection { background: color-mix(in srgb, var(--color-emerald) 18%, transparent); }
+}
